@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional solar panel installation for homes and businesses. Get a cleaner, more affordable energy future.">
+  <title>Solar Energy Installation | Clean Energy, Made Simple</title>
+  <style>
+    :root {
+      --navy: #102b3f;
+      --blue: #176b87;
+      --teal: #20a18a;
+      --sun: #ffc857;
+      --cream: #f7f7f1;
+      --ink: #183344;
+      --muted: #647783;
+      --white: #fff;
+      --radius: 22px;
+      --shadow: 0 18px 48px rgba(16,43,63,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; background: #fff; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 44px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-bottom: 1px solid #e8eef0; }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 850; letter-spacing: -.04em; font-size: 1.15rem; color: var(--navy); }
+    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; background: var(--sun); color: var(--navy); border-radius: 12px; font-size: 1.3rem; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: .92rem; font-weight: 650; color: #49616e; }
+    .nav-links a:hover { color: var(--teal); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 999px; background: var(--teal); color: white; font-weight: 750; border: 0; cursor: pointer; transition: .2s; }
+    .btn:hover { background: #168873; transform: translateY(-2px); }
+    .btn.dark { background: var(--navy); }
+    .hero { background: radial-gradient(circle at 85% 20%, rgba(255,200,87,.25), transparent 28%), linear-gradient(120deg, #f4f8f5, #e8f4f0); padding: 82px 0 76px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 54px; }
+    .eyebrow { color: var(--teal); text-transform: uppercase; letter-spacing: .16em; font-weight: 850; font-size: .75rem; }
+    h1 { color: var(--navy); font-size: clamp(2.8rem, 5.4vw, 5rem); line-height: 1.02; letter-spacing: -.065em; margin: 18px 0 22px; }
+    h1 span { color: var(--teal); }
+    .hero p { color: #526b76; font-size: 1.12rem; max-width: 540px; margin: 0 0 30px; }
+    .hero-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+    .text-link { color: var(--navy); font-weight: 750; padding: 12px 8px; }
+    .hero-art { min-height: 410px; position: relative; display: grid; place-items: center; }
+    .sun { position: absolute; width: 112px; height: 112px; border-radius: 50%; background: var(--sun); top: 18px; right: 48px; box-shadow: 0 0 0 18px rgba(255,200,87,.13); }
+    .house { width: min(100%, 500px); position: relative; z-index: 1; filter: drop-shadow(0 25px 20px rgba(16,43,63,.15)); }
+    .house-roof { height: 145px; background: #244d62; clip-path: polygon(50% 0, 100% 70%, 93% 80%, 50% 24%, 7% 80%, 0 70%); position: relative; z-index: 2; }
+    .panels { position: absolute; top: 45px; left: 23%; width: 57%; height: 86px; transform: skewY(27deg) rotate(-1deg); display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; z-index: 3; }
+    .panels i { background: repeating-linear-gradient(90deg, #27718b 0 2px, transparent 2px 34px), repeating-linear-gradient(0deg, #27718b 0 2px, transparent 2px 27px), #153d59; border: 2px solid #a5d8dc; border-radius: 3px; }
+    .house-body { width: 82%; margin: -4px auto 0; height: 210px; background: #fff; border: 5px solid #dce9e6; position: relative; }
+    .window { position: absolute; width: 76px; height: 90px; top: 42px; background: #9bd2d5; border: 7px solid #e8f1ef; }
+    .window.one { left: 13%; } .window.two { right: 13%; }
+    .door { position: absolute; bottom: 0; left: calc(50% - 29px); width: 58px; height: 115px; background: #d6a66c; border: 5px solid #f1e2cf; border-bottom: 0; }
+    .ground { height: 20px; width: 100%; background: #76b69a; border-radius: 50%; margin-top: -5px; }
+    .float-card { position: absolute; z-index: 4; bottom: 22px; left: 0; background: #fff; padding: 16px 19px; border-radius: 16px; box-shadow: var(--shadow); font-size: .85rem; font-weight: 750; }
+    .float-card strong { display: block; font-size: 1.4rem; color: var(--teal); }
+    section { padding: 82px 0; }
+    .section-head { max-width: 650px; margin: 0 auto 42px; text-align: center; }
+    h2 { font-size: clamp(2rem, 3.5vw, 3.15rem); line-height: 1.1; letter-spacing: -.05em; color: var(--navy); margin: 12px 0; }
+    .section-head p, .muted { color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .card { border: 1px solid #e6eeee; border-radius: var(--radius); padding: 28px; background: #fff; transition: .2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 15px; background: #e7f5ef; font-size: 1.5rem; margin-bottom: 20px; }
+    h3 { color: var(--navy); margin: 0 0 9px; font-size: 1.2rem; }
+    .card p { color: var(--muted); margin: 0; font-size: .96rem; }
+    .feature { background: var(--navy); color: white; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .feature h2 { color: white; }
+    .feature p { color: #c5d5dc; }
+    .feature-list { display: grid; gap: 17px; margin-top: 28px; }
+    .feature-list div { display: flex; gap: 12px; align-items: flex-start; color: #e3eeee; }
+    .check { color: var(--sun); font-weight: 900; }
+    .stat-panel { background: #1a4054; border: 1px solid #31596a; padding: 34px; border-radius: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .stat strong { display: block; color: var(--sun); font-size: 2.4rem; letter-spacing: -.05em; }
+    .stat span { color: #c5d5dc; font-size: .9rem; }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; counter-reset: step; }
+    .step { padding: 24px 20px; border-top: 3px solid var(--teal); background: var(--cream); border-radius: 0 0 16px 16px; }
+    .step b { display: block; color: var(--teal); font-size: .75rem; letter-spacing: .12em; margin-bottom: 12px; }
+    .cta { background: linear-gradient(120deg, #e9f5ef, #fff6df); text-align: center; }
+    .cta p { max-width: 580px; margin: 0 auto 26px; color: var(--muted); }
+    footer { background: #0b2232; color: #d3e0e4; padding: 38px 0; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer small { color: #91a8b1; }
+    .contact-note { font-size: .88rem; color: #91a8b1; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hero-grid, .feature-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 60px; }
+      .hero-art { min-height: 340px; }
+      .cards { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .feature-grid { gap: 34px; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(100% - 30px, 1160px); }
+      section { padding: 62px 0; }
+      .steps { grid-template-columns: 1fr; }
+      .stat-panel { padding: 24px; gap: 20px; }
+      .hero-art { transform: scale(.9); margin: -10px -15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home"><span class="brand-mark">☀</span><span>Solar PhotoVoltaic </span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#benefits">Why Solar</a><a href="#process">Meet the Team</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Get a free quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Powering a brighter tomorrow</div>
+          <h1>Make the switch to <span>clean energy.</span></h1>
+          <p>Take control of your electricity costs with reliable solar solutions designed for your home or business. A smarter way to power the things that matter.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Get your free estimate</a>
+            <a class="text-link" href="#services">Explore our services →</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a house with rooftop solar panels">
+          <div class="sun"></div>
+          <div class="house">
+            <div class="house-roof"></div>
+            <div class="panels"><i></i><i></i><i></i></div>
+            <div class="house-body"><div class="window one"></div><div class="window two"></div><div class="door"></div></div>
+            <div class="ground"></div>
+          </div>
+          <div class="float-card"><strong>☀ Solar made simple</strong>Clean power starts at home</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Solar solutions built around you.</h2>
+          <p>From your first consultation to ongoing system care, get support at every step of your clean-energy journey.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">🏠</div><h3>Residential Solar</h3><p>Make your home more energy independent with a solar system planned around your household's needs.</p></article>
+          <article class="card"><div class="icon">🏢</div><h3>Commercial Solar</h3><p>Help your business manage energy expenses with a tailored solar installation for your property.</p></article>
+          <article class="card"><div class="icon">🔋</div><h3>Battery Storage</h3><p>Store excess solar energy for later use and get more flexibility from your solar power system.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="benefits">
+      <div class="wrap feature-grid">
+        <div>
+          <div class="eyebrow" style="color:#ffc857">The solar advantage</div>
+          <h2>Good for your property. Better for the planet.</h2>
+          <p>Solar energy turns sunlight into useful electricity, helping reduce your reliance on conventional power sources.</p>
+          <div class="feature-list">
+            <div><span class="check">✓</span><span>Potentially lower electricity bills over time</span></div>
+            <div><span class="check">✓</span><span>Cleaner energy with no on-site emissions during operation</span></div>
+            <div><span class="check">✓</span><span>Designed to fit your roof, usage, and energy goals</span></div>
+            <div><span class="check">✓</span><span>Options for battery storage and future expansion</span></div>
+          </div>
+        </div>
+        <div class="stat-panel">
+          <div class="stat"><strong>01</strong><span>Personalized system design</span></div>
+          <div class="stat"><strong>02</strong><span>Quality-focused installation</span></div>
+          <div class="stat"><strong>03</strong><span>Clear project communication</span></div>
+          <div class="stat"><strong>04</strong><span>Ongoing support options</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Simple from start to finish</div>
+          <h2>Meet the Team</h2>
+          <p>We make it easy to understand your options and move forward with confidence.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>STEP 01</b><h3>Consultation</h3><p class="muted">Tell us about your property, electricity use, and goals.</p></div>
+          <div class="step"><b>STEP 02</b><h3>Custom design</h3><p class="muted">Review a system proposal suited to your site and needs.</p></div>
+          <div class="step"><b>STEP 03</b><h3>Installation</h3><p class="muted">Have your approved system installed and checked.</p></div>
+          <div class="step"><b>STEP 04</b><h3>Power on</h3><p class="muted">Get guidance on using and caring for your new system.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Let's talk solar</div>
+        <h2>Ready to see what solar can do for you?</h2>
+        <p>Reach out for an initial conversation about your property and energy goals. We'll help you understand the next steps.</p>
+        <a class="btn dark" href="mailto:your-email@example.com?subject=Solar%20installation%20inquiry">Contact us today</a>
+        <p class="contact-note" style="margin-top:16px">Replace the sample email address with your business contact email.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <a class="brand" href="#home" style="color:white"><span class="brand-mark">☀</span><span>Solar PhotoVoltaic</span></a>
+      <small>© <span id="year"></span> Solar PhotoVoltaic All rights reserved.</small>
+      <small>Clean energy. Clear possibilities.</small>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
